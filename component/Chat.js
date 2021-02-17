@@ -11,7 +11,7 @@ const ChatPageing = (  {history}  ) => {
 
     <ScrollView contentContainerStyle={styles.contentContainer}>
         <View style={{width:"80%", marginLeft:"10%"}}>
-            <Text style={{color:"#FF7F50"}}> Name </Text>
+            <Text style={{color:"#FF7F50"}}> aName </Text>
             <TextInput style={{ borderRadius:10, height: 40, borderColor: 'gray', borderWidth: 1 }} onChangeText={text => onChangeText(text)} value={value} />
 
             <Text style={{color:"#FF7F50"}}> Father Name</Text>
