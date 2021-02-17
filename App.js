@@ -5,17 +5,20 @@ import { NativeRouter, Switch, Route } from "react-router-native";
 import Hompage from './Hompage';
 import Car from './Car';
 import lightpage from './component/Torch';
+import ChatPageing from './component/Chat';
+
 
 const App = () => {
 
 
   return (
   <View>
-    <View style={{backgroundColor:"black", marginTop:-20}}>
-        <Image style={styles.tinyLogo} source={{uri: 'https://muslimmatters.org/wp-content/uploads/shutterstock_60478804-e1586745305866.jpg',}}/>
+    <View style={{backgroundColor:"black", marginTop:-15}}>
+        <Image style={styles.tinyLogo} source={{uri: 'https://muslimmatters.org/wp-content/uploads/shutterstock_60478804-e1586745305866.jpg'}}/>
         <Text style={styles.title}> আরবী শিক্ষা </Text>
-        <Text style={{marginTop:1}}></Text>
     </View>
+
+
   <ScrollView contentContainerStyle={styles.contentContainer}>
         <NativeRouter>
             <Switch>
@@ -23,6 +26,7 @@ const App = () => {
                     <Route exact path="/" component={Hompage} />
                     <Route path="/Carpage" component={Car} />
                     <Route path="/Torchpage" component={lightpage} />
+                    <Route path="/ChatPage" component={ChatPageing} />
                 </View>
             </Switch>
         </NativeRouter>
@@ -30,9 +34,6 @@ const App = () => {
     </View>
   );
 };
-
-
-
 
 
 
@@ -46,15 +47,17 @@ title: {
     textAlign: 'center',
     alignItems: 'center',
     color:"lightgray",
-    fontSize: 70,
+    fontSize: 65,
     fontFamily: "Cochin",
     fontWeight: "bold"
   },
 
 tinyLogo: {
     marginLeft:150,
-    width: 120,
-    height: 120,
+    width: 50,
+    left:40,
+    top:15,
+    height: 50,
     borderRadius:290,
   },
 

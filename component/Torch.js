@@ -18,11 +18,14 @@ const lightpage = (   { history }   ) => {
   <View>
         <Button title="Home" onPress={() => history.push("/")} />
         <Text> </Text>
-
-        <Button title="ON" color="#4B0082" onPress={onPresson}/>
+        <View style={{alignItems: "center"}} >
+             <Button title="ON" style={{backgroundColor:"#40E0Dx", color:"white", width:"80%", height:"20%", textAlign:"center", textAlignVertical:"center", borderRadius:20}} onPress={onPresson}/>
+        </View>
         <Text> </Text>
-        <Button title="OFF" color="#4B0082" onPress={offnPressoff}/>
-
+        <View style={{alignItems: "center"}} >
+             <Button title="OFF" style={{backgroundColor:"#40E0Dx", color:"white", width:"90%", height:"20%", textAlign:"center", textAlignVertical:"center", borderRadius:20}} onPress={offnPressoff}/>
+        </View>
+        <Text> </Text>
     </View>
   );
 };

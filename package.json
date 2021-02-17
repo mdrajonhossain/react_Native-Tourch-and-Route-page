@@ -10,6 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "expo-battery": "^4.0.0",
+    "native-base": "^2.15.2",
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-paper": "^4.7.1",

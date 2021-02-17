@@ -1,10 +1,19 @@
 import React from "react";
 
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, BackHandler  } from "react-native";
+
+onPressonexit = () => {
+        BackHandler.exitApp();
+     }
+
 
  export default ({ history }) => (
-   <View>
-                  <Button title="Torch" onPress={() => history.push("/Torchpage")} color="lightgreen"/>
+   <View style={{backgroundColor:"lightgray"}}>
+                 <Button title="exit" style={{width:"40%"}} color="red" onPress={onPressonexit}/>
+                 <Text></Text>
+                 <Button title="Torch" onPress={() => history.push("/Torchpage")} color="lightgreen"/>
+                 <Text></Text>
+                 <Button title="Add Form" onPress={() => history.push("/ChatPage")} color="#569999"/>
                  <Text></Text>
                   <Button title="আরবী বর্মালা" onPress={() => history.push("/Carpage")} color="#4B0082"/>
                  <Text></Text>
@@ -40,7 +49,8 @@ import { View, Text, Button } from "react-native";
                  <Text></Text>
                  <Button title="মাখরায কয়টি ও কি কি" color="#4B0082"/>
                  <Text></Text>
-                 <Text style={{color:"lightgreen"}}>Power By: Md. Rajon Hossain   <Text style={{color:"red"}}>Version: 1.00 </Text></Text>
+                 <Text style={{color:"white", alignItems:"center", justifyContent:"center",flex: 1,}}>Power By: Md. Rajon Hossain</Text>
+                 <Text style={{marginTop:80}}></Text>
 
    </View>
  );
